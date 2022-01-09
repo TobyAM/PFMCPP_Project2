@@ -16,12 +16,12 @@ video: Chapter 2 - Part 3
  
  1) Write down the names of the 6 major primitive types available in C++  here:
  
- 
- 
- 
- 
- 
- 
+ int
+ float
+ bool
+ double
+ char
+ unsigned int
  
  
  
@@ -54,15 +54,43 @@ video: Chapter 2 - Part 3
 10) click the [run] button.  Clear up any errors or warnings as best you can.
  */
 
-//2)
+//2) Declare Primatives
 void variableDeclarations()
 {
     //example:
     int number = 2; //declaration of a variable named "number", that uses the primitive type 'int', and the variable's initial value is '2'
     
+    //int
+    int realNumber = 1;
+    int wholeNumber = -3;
+    int msDosNumber = 9;
+
+    //float
+    float divisibleNumber = 1.5f;
+    float pitchOffset = -0.01f;
+    float faderLevel = 1243.423f;
+
+    //double
+    double trackVol = 0.4536243652413f;
+    double timeOffset = 0.00000003453f;
+    double balance = -324564.23456f;
+
+    //char
+    char middleInitial = 'F';
+    char foodSafetyRating = 'A';
+    char note = 'D';
+
+    //bool
+    bool bufferReady = false;
+    bool bypass = false;
+    bool thresholdPassed = true;
+
+    unsigned int channels = 2;
+    unsigned int trackCount = 1;
+    unsigned int versionNumber = 4;
 
     
-    ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
+    ignoreUnused(number, realNumber, wholeNumber, msDosNumber, divisibleNumber, pitchOffset, faderLevel, trackVol, timeOffset, balance, middleInitial, foodSafetyRating, note, bufferReady, bypass, thresholdPassed, channels, trackCount, versionNumber); //passing each variable declared to the ignoreUnused() function
 }
 
 /*
@@ -79,43 +107,43 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 /*
  1)
  */
-
+double compress(double input, int ratio = 1, float threshold = 1.0f){ ignoreUnused(input, ratio, threshold); }
 /*
  2)
  */
-
+int countCards(int cardsDrawn, int cardsInDeck = 52){ ignoreUnused(cardsDrawn, cardsInDeck); }
 /*
  3)
  */
-
+bool areWeThereYet(int distanceToDestination, int minutesDriven = 0, int avgSpeed = 60){ ignoreUnused(distanceToDestination, avgSpeed, minutesDriven); }
 /*
  4)
  */
-
+float getProgress(int totalTasks, int tasksCompleted = 0){ ignoreUnused(totalTasks, tasksCompleted); }
 /*
  5)
  */
-
+unsigned int countThingsInStuff(bool stuffReady, unsigned int mainThings = 1, unsigned int extraThings = 0, unsigned int missingThings = 0){ ignoreUnused(stuffReady, mainThings, extraThings, missingThings); }
 /*
  6)
  */
-
+char rateRestaurant(unsigned int infractions, unsigned int incidents, char smellRating, char cleanlinessRating){ ignoreUnused(infractions, incidents, smellRating, cleanlinessRating); }
 /*
  7)
  */
-
+void phaseShift(bool flip, float phaseOffset, double inputOne = 0.0f, double inputTwo = 0.0f){ ignoreUnused(flip, phaseOffset, inputOne, inputTwo); }
 /*
  8)
  */
-
+void exportNote(bool includeHeader = false, unsigned int noteIndex = 1);
 /*
  9)
  */
-
+bool passQC(float phase, unsigned int clips, float rms = 0.5f, float peak = 0.8f, float lufs = -14.0f){ ignoreUnused(phase, clips, rms, peak, lufs); }
 /*
  10)
  */
-
+float getPhase(double leftInput = 0.0f, double rightInput = 0.0f){ ignoreUnused(leftInput, rightInput); }
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
 
@@ -136,27 +164,27 @@ int main()
     auto carRented = rentACar(6, 2); 
     
     //1)
-    
+    auto compressedAudio = compress(0.2345f, 4, 0.7f);
     //2)
-    
+    auto remainingCards = countCards(14);
     //3)
-    
+    auto atDestination = areWeThereYet(231, 143);
     //4)
-    
+    auto progress = getProgress(42, 4);
     //5)
-    
+    auto numberThingsInStuff = countThingsInStuff(true, 242, 0, 4);
     //6)
-    
+    auto restaurantRating = rateRestaurant(0, 1, 'B', 'C');
     //7)
-    
+    phaseShift(false, 34.4f, 0.2345353234f, 0.2354234524f);
     //8)
-    
+    exportNote(false, 35);
     //9)
-    
+    auto qc = passQC(0.0f, 0, 0.6f, 0.9f, -11.0f);
     //10)
+    auto phase = getPhase(0.1423f, -0.2354f);
     
-    
-    ignoreUnused(carRented);
+    ignoreUnused(carRented, compressedAudio, remainingCards, atDestination, progress, numberThingsInStuff, restaurantRating, qc, phase);
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
