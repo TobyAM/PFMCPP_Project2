@@ -71,9 +71,9 @@ void variableDeclarations()
     float faderLevel = 1243.423f;
 
     //double
-    double trackVol = 0.4536243652413f;
-    double timeOffset = 0.00000003453f;
-    double balance = -324564.23456f;
+    double trackVol = 0.62352443652413;
+    double timeOffset = 0.000253403453;
+    double balance = -324564.343456;
 
     //char
     char middleInitial = 'F';
@@ -107,43 +107,91 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 /*
  1)
  */
-double compress(double input, int ratio = 1, float threshold = 1.0f){ ignoreUnused(input, ratio, threshold); }
+double compress(double input, int ratio = 1, float threshold = 1.0f)
+{
+    ignoreUnused(input, ratio, threshold);
+    return {};
+}
+
 /*
  2)
  */
-int countCards(int cardsDrawn, int cardsInDeck = 52){ ignoreUnused(cardsDrawn, cardsInDeck); }
+int countCards(int cardsDrawn, int cardsInDeck = 52)
+{
+    ignoreUnused(cardsDrawn, cardsInDeck);
+    return {};
+}
+
 /*
  3)
  */
-bool areWeThereYet(int distanceToDestination, int minutesDriven = 0, int avgSpeed = 60){ ignoreUnused(distanceToDestination, avgSpeed, minutesDriven); }
+bool areWeThereYet(int distanceToDestination, int minutesDriven = 0, int avgSpeed = 60)
+{
+    ignoreUnused(distanceToDestination, avgSpeed, minutesDriven);
+    return {};
+}
+
 /*
  4)
  */
-float getProgress(int totalTasks, int tasksCompleted = 0){ ignoreUnused(totalTasks, tasksCompleted); }
+float getProgress(int totalTasks, int tasksCompleted = 0)
+{
+    ignoreUnused(totalTasks, tasksCompleted);
+    return {};
+}
+
 /*
  5)
  */
-unsigned int countThingsInStuff(bool stuffReady, unsigned int mainThings = 1, unsigned int extraThings = 0, unsigned int missingThings = 0){ ignoreUnused(stuffReady, mainThings, extraThings, missingThings); }
+unsigned int countThingsInStuff(bool stuffReady, unsigned int mainThings = 1, unsigned int extraThings = 0, unsigned int missingThings = 0)
+{
+    ignoreUnused(stuffReady, mainThings, extraThings, missingThings);
+    return {};
+}
+
 /*
  6)
  */
-char rateRestaurant(unsigned int infractions, unsigned int incidents, char smellRating, char cleanlinessRating){ ignoreUnused(infractions, incidents, smellRating, cleanlinessRating); }
+char rateRestaurant(unsigned int infractions, unsigned int incidents, char smellRating, char cleanlinessRating)
+{
+    ignoreUnused(infractions, incidents, smellRating, cleanlinessRating);
+    return {};
+}
+
 /*
  7)
  */
-void phaseShift(bool flip, float phaseOffset, double inputOne = 0.0f, double inputTwo = 0.0f){ ignoreUnused(flip, phaseOffset, inputOne, inputTwo); }
+void phaseShift(bool flip, float phaseOffset, float inputOne = 0.0f, float inputTwo = 0.0f)
+{
+    ignoreUnused(flip, phaseOffset, inputOne, inputTwo);
+}
+
 /*
  8)
  */
-void exportNote(bool includeHeader = false, unsigned int noteIndex = 1);
+void exportNote(bool includeHeader = false, unsigned int noteIndex = 1)
+{
+    ignoreUnused(includeHeader, noteIndex);
+}
+
 /*
  9)
  */
-bool passQC(float phase, unsigned int clips, float rms = 0.5f, float peak = 0.8f, float lufs = -14.0f){ ignoreUnused(phase, clips, rms, peak, lufs); }
+bool passQC(float phase, unsigned int clips, float rms = 0.5f, float peak = 0.8f, float lufs = -14.0f)
+{
+    ignoreUnused(phase, clips, rms, peak, lufs);
+    return {};
+}
+
 /*
  10)
  */
-float getPhase(double leftInput = 0.0f, double rightInput = 0.0f){ ignoreUnused(leftInput, rightInput); }
+float getPhase(double leftInput = 0.0, double rightInput = 0.0)
+{
+    ignoreUnused(leftInput, rightInput);
+    return {};
+}
+
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
 
@@ -164,7 +212,7 @@ int main()
     auto carRented = rentACar(6, 2); 
     
     //1)
-    auto compressedAudio = compress(0.2345f, 4, 0.7f);
+    auto compressedAudio = compress(0.2345, 4, 0.7f);
     //2)
     auto remainingCards = countCards(14);
     //3)
@@ -182,7 +230,7 @@ int main()
     //9)
     auto qc = passQC(0.0f, 0, 0.6f, 0.9f, -11.0f);
     //10)
-    auto phase = getPhase(0.1423f, -0.2354f);
+    auto phase = getPhase(0.1423, -0.2354);
     
     ignoreUnused(carRented, compressedAudio, remainingCards, atDestination, progress, numberThingsInStuff, restaurantRating, qc, phase);
     std::cout << "good to go!" << std::endl;
